@@ -1,0 +1,5 @@
+1. Avoid using "any" for varaible declaration. Whenever you don't declare the type, it will take "any" type by default.
+2. Both syntax are same:
+    let num : number = 343; (:type on left-hand side)
+    let num = <number> 343; (<type> on right-hand side) 
+3. union: '|' Any type from the given types
