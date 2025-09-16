@@ -42,7 +42,7 @@ Example: tsc .\Basics.ts
 
 - **Command:**
   ```bash
-  tsc --init
+  tsc -init
   ```
 
 - **Note:** The configuration file must be created in the root folder.
