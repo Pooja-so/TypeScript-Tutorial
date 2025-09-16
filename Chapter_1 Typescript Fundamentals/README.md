@@ -1,6 +1,4 @@
-# TypeScript Fundamentals
-
-## Chapter 1: Fundamentals
+## Chapter 1: TypeScript Fundamentals
 
 ### Installation
 
@@ -10,8 +8,6 @@ Install TypeScript globally:
 npm i -g typescript
 ```
 
----
-
 ### Run the .ts file:
 
 ```bash
@@ -19,7 +15,7 @@ npm i -g typescript
 Example: tsc .\Basics.ts
 ```
 
--
+---
 
 ## Points
 
@@ -34,38 +30,30 @@ Example: tsc .\Basics.ts
   ```bash
   tsc filename -w
   ```
-
-````
-### Watch Mode
-
-```bash
-tsc filename -w
-````
-
-This will constantly watch the file for any changes.
-There is no need for manual re-compilation.
-
+- Watch Mode: Run the file in `watch mode`
+  This will constantly watch the file for any changes.
+  There is no need for manual re-compilation.
+  ```bash
+  tsc filename -w
+  ````
 ---
 
 ### Creating a `tsc` Config File
 
 - **Command:**
-
-```bash
-tsc --init
-```
+  ```bash
+  tsc --init
+  ```
 
 - **Note:** The configuration file must be created in the root folder.
 - After successful creation, uncomment the following options in
   `tsconfig.json:`
-
-```bash
-"rootDir": "./src",
-"outDir": "./dist"
-```
+  ```bash
+  "rootDir": "./src",
+  "outDir": "./dist"
+  ```
 
 - **Now just run:**
-
-```bash
-tsc -w
-```
+  ```bash
+  tsc -w
+  ```
