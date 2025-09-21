@@ -7,6 +7,8 @@
 import ThemeProvider from "./components/Hooks/ThemeProvider";
 import Home from "./components/Home";
 
+import Counter from "./components/Hooks/ReducerHook";
+
 function App() {
   // const [value, setValue] = useState<string>("");
   // function isAdult(age: number) {
@@ -30,6 +32,9 @@ function App() {
       <ThemeProvider>
         <Home />
       </ThemeProvider>
+
+      {/* Example 5: useReducer Hook */}
+      <Counter />
     </>
   );
 }
