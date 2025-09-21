@@ -66,3 +66,9 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.boxContainer {
+  height: 200 px;
+  width: 200px;
+  padding: 3px;
+}

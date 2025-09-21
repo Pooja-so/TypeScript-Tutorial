@@ -1,15 +1,17 @@
 // import Parent from "./components/Parent";
 // import Box from "./components/Box";
-import Form from "./components/Form";
-import { useState } from "react";
+// import Form from "./components/Form";
+// import { useState } from "react";
 
-import UserForm from "./components/Hooks";
+// import UserForm from "./components/Hooks/StateHook";
+import ThemeProvider from "./components/Hooks/ThemeProvider";
+import Home from "./components/Home";
 
-// function isAdult(age: number) {
-//   return age > 18;
-// }
 function App() {
-  const [value, setValue] = useState<string>("");
+  // const [value, setValue] = useState<string>("");
+  // function isAdult(age: number) {
+  //   return age > 18;
+  // }
   return (
     <>
       {/* Example 1
@@ -20,8 +22,14 @@ function App() {
       </Parent>  */}
       {/* Example 3
         <Form label="Search" value={value} setValue={setValue} /> */}
-
+      {/* Example 4: State variable 
       <UserForm />
+      */}
+
+      {/* Example 4: Context API */}
+      <ThemeProvider>
+        <Home />
+      </ThemeProvider>
     </>
   );
 }
