@@ -7,12 +7,17 @@ import {
   TextField,
   Button,
 } from "@mui/material";
-import { useState, type FormEvent } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import TodoItem from "./component/TodoItem";
+import { getTodos, saveTodos } from "./utils/features";
 
 function App() {
-  const [todos, setTodos] = useState<TodoItemType[]>([]);
+  const [todos, setTodos] = useState<TodoItemType[]>(getTodos());
   const [title, setTitle] = useState<string>("");
+
+  useEffect(() => {
+    saveTodos(todos);
+  }, [todos]);
 
   const addTaskHandler = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
@@ -29,7 +34,6 @@ function App() {
 
     // Push the task into the todos
     setTodos((prev) => [...prev, todo]);
-
     // Empty the task
     setTitle("");
   };
@@ -51,7 +55,8 @@ function App() {
     const newTodos = todos.map((todo) => {
       if (todo.id === id) todo.title = newTitle;
       return todo;
-    });j
+    });
+
     setTodos(newTodos);
   };
 
